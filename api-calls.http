@@ -1,8 +1,10 @@
+
 POST http://localhost:6080/api/phonebill/ HTTP/1.1
 content-type: application/json
 
 {
-    "price_plan": "sms 101",
-    "actions" : "call, sms, call"
+    "price_plan": "call 101",
+    "actions" : "call, sms, call, call, call, call, call, call, call, call, call, call, call, call, call, call, call, call, call"
 }
+
 

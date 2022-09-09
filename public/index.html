@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PricePlan APP</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="simple-grid.css">
+    <script src="./pricePlan.js"></script>
+
+</head>
+
+<body>
+    <h1>Price Plan Widgets</h1>
+    <div class="container" x-data="price_plan">
+        <div class="row">
+
+            <div class="row">
+
+                <div class="col-12">
+                    <div x:show="false" class="message" class="row" class="col-6">
+                        <span>STATUS:<span x-text="status"></span></span>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="smsP">PRICE PLAN:</label>
+                        <input type="text" x-model="price_name" placeholder="Please enter Price Plana">
+                    </div>
+
+                    <div>
+                        <label for="smsP">SET SMS PRICE:</label>
+                        <input type="number" x-model="sms_price" placeholder="Enter SMS price">
+                    </div>
+
+                    <div>
+                        <label for="callP">SET CALL PRICE:</label>
+                        <input type="number" x-model="call_price" placeholder="Enter CALL price">
+                    </div>
+
+                    <div>
+                        <button x-on:click="setPrice">Update Price Plan</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div class="col-6">
+                        <label for="price_plan">Price Plan:</label>
+                        <input type="text" x-model="price_plan" placeholder="Please your price plan">
+                        
+                    </div>
+
+                    <div class="col-6">
+                        <label for="aaction">Usage:</label>
+                        <input type="text" x-model="actions" placeholder="Please your sms and call">
+                        <!-- <button x-on:click="call_price">Call</button>
+                        <button x-on:click="sms_price">SMS</button>
+                        <span x-text="sms_price"></span>
+                        <span x-text="call_price">Call"></span> -->
+                        
+                    </div>
+
+                    <div class="col-12">
+                        <div x:show="false" class="message" class="row" class="col-12">
+                            <span>Total Cost: R<span x-text="totalcost"></span></span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button x-on:click="totalCost">Calculate Cost</button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
