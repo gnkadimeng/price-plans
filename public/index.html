@@ -24,26 +24,27 @@
 
                 <div class="col-12">
                     <div x:show="false" class="message" class="row" class="col-6">
-                        <span>STATUS:<span x-text="status"></span></span>
+                        <span><span x-text="status"></span></span>
                     </div>
 
                     <div class="col-6">
                         <label for="smsP">PRICE PLAN:</label>
-                        <input type="text" x-model="price_name" placeholder="Please enter Price Plana">
+                        <input type="text" x-model="price_name" placeholder="example sms 101">
+                        <span></span>
                     </div>
 
                     <div>
                         <label for="smsP">SET SMS PRICE:</label>
-                        <input type="number" x-model="sms_price" placeholder="Enter SMS price">
+                        <input type="number" x-model="sms_price" placeholder="example 1.30">
                     </div>
 
                     <div>
                         <label for="callP">SET CALL PRICE:</label>
-                        <input type="number" x-model="call_price" placeholder="Enter CALL price">
+                        <input type="number" x-model="call_price" placeholder="2.90">
                     </div>
 
                     <div>
-                        <button x-on:click="setPrice">Update Price Plan</button>
+                        <button x-on:click="setPrice">Update</button>
                     </div>
                 </div>
 
@@ -56,17 +57,17 @@
                     <div class="col-6">
                         <label for="price_plan">Price Plan:</label>
                         <input type="text" x-model="price_plan" placeholder="Please your price plan">
-                        
+
                     </div>
 
                     <div class="col-6">
-                        <label for="aaction">Usage:</label>
+                        <label for="aaction">Bill items:</label>
                         <input type="text" x-model="actions" placeholder="Please your sms and call">
                         <!-- <button x-on:click="call_price">Call</button>
                         <button x-on:click="sms_price">SMS</button>
                         <span x-text="sms_price"></span>
                         <span x-text="call_price">Call"></span> -->
-                        
+
                     </div>
 
                     <div class="col-12">
@@ -76,7 +77,7 @@
                     </div>
 
                     <div>
-                        <button x-on:click="totalCost">Calculate Cost</button>
+                        <button x-on:click="totalCost">Calculate</button>
                     </div>
 
                 </div>
